@@ -1,8 +1,8 @@
 {
   "name": "@riflending/riflending-js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Think and Dev",
-  "description": "A JavaScript SDK for Ethereum and the RIF Lending Protocol.",
+  "description": "A JavaScript SDK for RSK and the rLending Protocol.",
   "license": "BSD-3-Clause",
   "main": "dist/nodejs/index.js",
   "scripts": {
