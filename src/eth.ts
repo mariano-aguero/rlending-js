@@ -299,7 +299,7 @@ export async function getBalance(
  */
 export function _createProvider(options: CallOptions = {}) : Provider {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let provider: any = options.provider || (options.network || 'rsk-testnet');
+  let provider: any = options.provider || (options.network || 'testnet');
   const isADefaultProvider = !!ethers.providers.getNetwork(provider.toString());
 
   // Create an ethers provider, web3's can sign
