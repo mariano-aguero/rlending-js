@@ -120,7 +120,7 @@ export async function getCompBalance(
  */
 export async function getCompAccrued(
   _address: string,
-  _provider : Provider | string='rsk-testnet'
+  _provider : Provider | string='testnet'
 ) : Promise<string> {
   const provider = await eth._createProvider({ provider: _provider });
   const net = await eth.getProviderNetwork(provider);
