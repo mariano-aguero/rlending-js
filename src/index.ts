@@ -50,7 +50,7 @@ ethers.utils.Logger.setLogLevel(ethers.utils.Logger.levels.ERROR);
  * @returns {object} Returns an instance of the Compound.js SDK.
  */
 const Compound = function(
-  provider: Provider | string = 'rsk-testnet', options: CompoundOptions = {}
+  provider: Provider | string = 'testnet', options: CompoundOptions = {}
 ) : CompoundInstance {
   const originalProvider = provider;
 
