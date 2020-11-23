@@ -4,6 +4,7 @@
  */
 
 import { ethers } from 'ethers';
+import {getNetNameWithChainId} from './util';
 import { AbiItem, CallOptions, Provider, ProviderNetwork } from './types';
 
 enum JsonRpc {
@@ -234,7 +235,8 @@ export async function getProviderNetwork(
 
   return {
     id: networkId,
-    name: network.name === 'homestead' ? 'eth-mainnet' : network.name
+    //name: network.name === 'homestead' ? 'eth-mainnet' : network.name
+    name: getNetNameWithChainId(networkId)
   };
 }
 

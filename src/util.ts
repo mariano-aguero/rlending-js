@@ -219,7 +219,7 @@ export function getNetNameWithChainId(chainId: number) : string {
     4: 'rinkeby',
     5: 'goerli',
     30: 'mainnet',
-    31:'rsk-testnet',
+    31: 'testnet',
     42: 'kovan',
   };
   return networks[chainId];

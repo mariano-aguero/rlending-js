@@ -78,15 +78,15 @@ export async function supply(
 
   amount = ethers.BigNumber.from(amount.toString());
 
-  if (cTokenName === constants.cETH) {
-    options.abi = abi.cEther;
+  if (cTokenName === constants.cRBTC) {
+    options.abi = abi.CRBTC;
   } else {
     options.abi = abi.cErc20;
   }
 
   options._compoundProvider = this._provider;
 
-  if (cTokenName !== constants.cETH && noApprove !== true) {
+  if (cTokenName !== constants.cRBTC && noApprove !== true) {
     const underlyingAddress = address[this._network.name][asset];
     const userAddress = this._provider.address;
 
@@ -112,7 +112,7 @@ export async function supply(
   }
 
   const parameters = [];
-  if (cTokenName === constants.cETH) {
+  if (cTokenName === constants.cRBTC) {
     options.value = amount;
   } else {
     parameters.push(amount);
@@ -190,7 +190,7 @@ export async function redeem(
 
   const trxOptions: CallOptions = {
     _compoundProvider: this._provider,
-    abi: cTokenName === constants.cETH ? abi.cEther : abi.cErc20,
+    abi: cTokenName === constants.cRBTC ? abi.CRBTC : abi.cErc20,
   };
   const parameters = [ amount ];
   const method = assetIsCToken ? 'redeem' : 'redeemUnderlying';
@@ -268,7 +268,7 @@ export async function borrow(
     _compoundProvider: this._provider,
   };
   const parameters = [ amount ];
-  trxOptions.abi = cTokenName === constants.cETH ? abi.cEther : abi.cErc20;
+  trxOptions.abi = cTokenName === constants.cRBTC ? abi.CRBTC : abi.cErc20;
 
   return eth.trx(cTokenAddress, 'borrow', parameters, trxOptions);
 }
@@ -356,15 +356,15 @@ export async function repayBorrow(
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const parameters: any[] = method === 'repayBorrowBehalf' ? [ borrower ] : [];
-  if (cTokenName === constants.cETH) {
+  if (cTokenName === constants.cRBTC) {
     trxOptions.value = amount;
-    trxOptions.abi = abi.cEther;
+    trxOptions.abi = abi.CRBTC;
   } else {
     parameters.push(amount);
     trxOptions.abi = abi.cErc20;
   }
 
-  if (cTokenName !== constants.cETH && noApprove !== true) {
+  if (cTokenName !== constants.cRBTC && noApprove !== true) {
     const underlyingAddress = address[this._network.name][asset];
     const userAddress = this._provider.address;
 
