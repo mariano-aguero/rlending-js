@@ -234,7 +234,7 @@ export async function getProviderNetwork(
 
   return {
     id: networkId,
-    name: network.name === 'homestead' ? 'mainnet' : network.name
+    name: network.name === 'homestead' ? 'eth-mainnet' : network.name
   };
 }
 
@@ -297,7 +297,7 @@ export async function getBalance(
  */
 export function _createProvider(options: CallOptions = {}) : Provider {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let provider: any = options.provider || (options.network || 'mainnet');
+  let provider: any = options.provider || (options.network || 'rsk-testnet');
   const isADefaultProvider = !!ethers.providers.getNetwork(provider.toString());
 
   // Create an ethers provider, web3's can sign

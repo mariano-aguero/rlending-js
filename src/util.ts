@@ -179,7 +179,7 @@ export function request(options: any) : Promise<any> {
  * console.log('cETH Address: ', Compound.util.getAddress(Compound.cETH));
  * ```
  */
-export function getAddress(contract: string, network='mainnet') : string {
+export function getAddress(contract: string, network='rsk-testnet') : string {
   return address[network][contract];
 }
 
@@ -214,10 +214,12 @@ export function getAbi(contract: string): AbiType[] {
  */
 export function getNetNameWithChainId(chainId: number) : string {
   const networks = {
-    1: 'mainnet',
+    1: 'eth-mainnet',
     3: 'ropsten',
     4: 'rinkeby',
     5: 'goerli',
+    30: 'mainnet',
+    31:'rsk-testnet',
     42: 'kovan',
   };
   return networks[chainId];

@@ -1,5 +1,5 @@
 // Publicly revealed on the parent class
-export const constants = {
+export const constants = {/*
   'PriceFeed': 'PriceFeed',
   'Maximillion': 'Maximillion',
   'CompoundLens': 'CompoundLens',
@@ -27,11 +27,70 @@ export const constants = {
   'USDC': 'USDC',
   'USDT': 'USDT',
   'WBTC': 'WBTC',
-  'ZRX': 'ZRX'
+  'ZRX': 'ZRX'*/
+  "Unitroller":"Unitroller",
+  "MultiSigWallet":"MultiSigWallet",
+  "PriceOracleProxy":"PriceOracleProxy",
+  "MockPriceProviderMoc Dai":"MockPriceProviderMoc Dai",
+  "PriceOracleAdapter Rif":"PriceOracleAdapter Rif",
+  "PriceOracleAdapter Dai":"PriceOracleAdapter Dai",
+  "Comptroller":"Comptroller",
+  "JumpRateModelV2":"JumpRateModelV2",
+  "WhitePaperInterestRateModel":"WhitePaperInterestRateModel",
+  "cDai":"cDai",
+  "cRif":"cRif",
+  "cRbtc":"cRbtc",
+  "rLen":"rLen",
+  "MaximillionAddress":"MaximillionAddress",
+  "RBTC Moc Oracle":"RBTC Moc Oracle",
+  "RIF Moc Oracle":"RIF Moc Oracle",
+  "RIF":"RIF",
+  "rKovDAI":"rKovDAI",
+  'rBTC':'rBTC',
 };
 
 export const address = {
-  "mainnet": {
+  "rsk-testnet": {
+    "Unitroller":"0x51401d51f7cfc1a91f88a973edd0762d2021bb5b",
+    "MultiSigWallet":"0x0fce7d2e8e0a92ba6068a54ed2a7e628ea022e72",
+    "PriceOracleProxy":"0x0d0006f3f700a468b6467615f2fb9efdec4e4e33",
+    "MockPriceProviderMoc Dai":"0x51461e07dfb997e5fd15c1febe7a19fd931ad500",
+    "PriceOracleAdapter Rif":"0x20e3996603e6c9415e56181ee55d2b8e1c423acf",
+    "PriceOracleAdapter Dai":"0xa60c1a0ca1e95962cc1a77dec306545dc8475b74",
+    "Comptroller":"0xca8744cfaeb8ef4bc1fe5350f24058768fb78a5e",
+    "JumpRateModelV2":"0x5f3fd1f2f5d8f6ac902d4653e517f1731732a0b6",
+    "WhitePaperInterestRateModel":"0x8ac501b80a8932cfac4f0c55213b372c02631c5e",
+    "cDai":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
+    "cRif":"0x2b47f1b810faf99d911228a87c9c6d0d61514b9d",
+    "cRbtc":"0xa04bb527be81bb92b59059a45206101b2d11200d",
+    "rLen":"0xcbf15821e5ecb15d46af5d98bf25b7ce49e4ebd2",
+    "MaximillionAddress":"0x5edd33c93086bef90692a3db1cbc51104734b851",
+    "RBTC Moc Oracle":"0x2d39cc54dc44ff27ad23a91a9b5fd750dae4b218",
+    "RIF Moc Oracle":"0x9d4b2c05818a0086e641437fcb64ab6098c7bbec",
+    "RIF":"0x19f64674d8a5b4e652319f5e239efd3bc969a1fe",
+    "rKovDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
+  },
+  "mainnet": {/*TODO - uptate this to RSK mainnet*/
+    "Unitroller":"0x51401d51f7cfc1a91f88a973edd0762d2021bb5b",
+    "MultiSigWallet":"0x0fce7d2e8e0a92ba6068a54ed2a7e628ea022e72",
+    "PriceOracleProxy":"0x0d0006f3f700a468b6467615f2fb9efdec4e4e33",
+    "MockPriceProviderMoc Dai":"0x51461e07dfb997e5fd15c1febe7a19fd931ad500",
+    "PriceOracleAdapter Rif":"0x20e3996603e6c9415e56181ee55d2b8e1c423acf",
+    "PriceOracleAdapter Dai":"0xa60c1a0ca1e95962cc1a77dec306545dc8475b74",
+    "Comptroller":"0xca8744cfaeb8ef4bc1fe5350f24058768fb78a5e",
+    "JumpRateModelV2":"0x5f3fd1f2f5d8f6ac902d4653e517f1731732a0b6",
+    "WhitePaperInterestRateModel":"0x8ac501b80a8932cfac4f0c55213b372c02631c5e",
+    "cDai":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
+    "cRif":"0x2b47f1b810faf99d911228a87c9c6d0d61514b9d",
+    "cRbtc":"0xa04bb527be81bb92b59059a45206101b2d11200d",
+    "rLen":"0xcbf15821e5ecb15d46af5d98bf25b7ce49e4ebd2",
+    "MaximillionAddress":"0x5edd33c93086bef90692a3db1cbc51104734b851",
+    "RBTC Moc Oracle":"0x2d39cc54dc44ff27ad23a91a9b5fd750dae4b218",
+    "RIF Moc Oracle":"0x9d4b2c05818a0086e641437fcb64ab6098c7bbec",
+    "RIF":"0x19f64674d8a5b4e652319f5e239efd3bc969a1fe",
+    "rKovDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
+  },
+  "eth-mainnet": {
     "PriceFeed": "0x9b8eb8b3d6e2e0db36f41455185fef7049a35cae",
     "Maximillion": "0xf859A1AD94BcF445A406B892eF0d3082f4174088",
     "CompoundLens": "0xd513d22422a3062Bd342Ae374b4b9c20E0a9a074",

@@ -71,7 +71,7 @@ function toChecksumAddress(_address) {
  */
 export async function getCompBalance(
   _address: string,
-  _provider : Provider | string='mainnet'
+  _provider : Provider | string='rsk-testnet'
 ) : Promise<string> {
   const provider = await eth._createProvider({ provider: _provider });
   const net = await eth.getProviderNetwork(provider);
@@ -120,7 +120,7 @@ export async function getCompBalance(
  */
 export async function getCompAccrued(
   _address: string,
-  _provider : Provider | string='mainnet'
+  _provider : Provider | string='rsk-testnet'
 ) : Promise<string> {
   const provider = await eth._createProvider({ provider: _provider });
   const net = await eth.getProviderNetwork(provider);
