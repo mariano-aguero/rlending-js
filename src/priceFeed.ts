@@ -52,7 +52,7 @@ async function cTokenExchangeRate(
   const method = 'exchangeRateCurrent';
   const options = {
     _compoundProvider: this._provider,
-    abi: cTokenName === constants.cETH ? abi.cEther : abi.cErc20,
+    abi: cTokenName === constants.cRBTC ? abi.CRBTC : abi.cErc20,
   };
   const exchangeRateCurrent = await eth.read(address, method, [], options);
   const mantissa = 18 + underlyingDecimals - 8; // cToken always 8 decimals
