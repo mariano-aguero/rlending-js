@@ -231,11 +231,8 @@ export async function getProviderNetwork(
 
   networkId = isNaN(networkId) ? 0 : +networkId;
 
-  const network = ethers.providers.getNetwork(networkId) || { name: 'unknown' };
-
   return {
     id: networkId,
-    //name: network.name === 'homestead' ? 'eth-mainnet' : network.name
     name: getNetNameWithChainId(networkId)
   };
 }
