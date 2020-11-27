@@ -37,7 +37,7 @@ export const constants = {/*
   "Comptroller":"Comptroller",
   "JumpRateModelV2":"JumpRateModelV2",
   "WhitePaperInterestRateModel":"WhitePaperInterestRateModel",
-  "cRDAI":"cRDAI",
+  "crDAI":"crDAI",
   "cRIF":"cRIF",
   "cRBTC":"cRBTC",
   "RLEN":"RLEN",
@@ -60,7 +60,7 @@ export const address = {
     "Comptroller":"0xca8744cfaeb8ef4bc1fe5350f24058768fb78a5e",
     "JumpRateModelV2":"0x5f3fd1f2f5d8f6ac902d4653e517f1731732a0b6",
     "WhitePaperInterestRateModel":"0x8ac501b80a8932cfac4f0c55213b372c02631c5e",
-    "cRDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
+    "crDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
     "cRIF":"0x2b47f1b810faf99d911228a87c9c6d0d61514b9d",
     "cRBTC":"0xa04bb527be81bb92b59059a45206101b2d11200d",
     "RLEN":"0xcbf15821e5ecb15d46af5d98bf25b7ce49e4ebd2",
@@ -80,7 +80,7 @@ export const address = {
     "Comptroller":"0xca8744cfaeb8ef4bc1fe5350f24058768fb78a5e",
     "JumpRateModelV2":"0x5f3fd1f2f5d8f6ac902d4653e517f1731732a0b6",
     "WhitePaperInterestRateModel":"0x8ac501b80a8932cfac4f0c55213b372c02631c5e",
-    "cRDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
+    "crDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
     "cRIF":"0x2b47f1b810faf99d911228a87c9c6d0d61514b9d",
     "cRBTC":"0xa04bb527be81bb92b59059a45206101b2d11200d",
     "RLEN":"0xcbf15821e5ecb15d46af5d98bf25b7ce49e4ebd2",
@@ -241,7 +241,7 @@ export const abi = {
 
 // export const cTokens = ['cBAT', 'cDAI', 'cETH', 'cREP', 'cSAI', 'cUSDC', 'cUSDT', 'cWBTC', 'cZRX'];
 // export const underlyings = ['BAT', 'DAI', 'ETH', 'REP', 'SAI', 'USDC', 'USDT', 'WBTC', 'ZRX'];
-export const cTokens = ['cRBTC', 'cRIF', 'cRDAI'];
+export const cTokens = ['cRBTC', 'cRIF', 'crDAI'];
 export const underlyings = ['RBTC','RIF','rDAI'];
 
 // additional assets supported by the open price feed
@@ -270,12 +270,14 @@ export const decimals = {
   'ZRX': 18,
   'cRBTC': 18,
   'cRIF': 18,
-  'cRDAI': 18,
+  'crDAI': 18,
   'RBTC': 18,
   'RIF': 18,
   'rDAI': 18,
   'RLEN': 18
 };
+
+export const cTokensDetails = [{"symbol":"cRBTC","name":"ctoken rbtc","decimals":decimals["cRBTC"], "underlying":{"symbol":"RBTC", "name":"RSK Smart Bitcoin","decimals":decimals["RBTC"]}}, {"symbol":"cRIF","name":"ctoken rLending Rif","decimals":decimals["cRIF"], "underlying":{"symbol":"RIF", "name":"rLending Rif","decimals":decimals["RIF"]}}, {"symbol":"crDAI","name":"ctoken rLending Dai","decimals":decimals["crDAI"], "underlying":{"symbol":"rKovDAI", "name":"rLending Dai","decimals":decimals["DAI"]}}];
 
 export const errorCodes = {
   'comptroller': {

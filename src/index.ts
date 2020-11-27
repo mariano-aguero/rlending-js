@@ -13,7 +13,7 @@ import * as priceFeed from './priceFeed';
 import * as comp from './comp';
 import * as gov from './gov';
 import * as api from './api';
-import { constants, decimals } from './constants';
+import { constants, decimals, cTokens, cTokensDetails} from './constants';
 import { Provider, CompoundOptions, CompoundInstance } from './types';
 
 // Turn off Ethers.js warnings
@@ -90,6 +90,8 @@ Compound.comp = {
   getCompBalance: comp.getCompBalance,
   getCompAccrued: comp.getCompAccrued,
 };
+Compound.cTokens = cTokens;
+Compound.cTokensDetails = cTokensDetails;
 Object.assign(Compound, constants);
 
 export = Compound;
