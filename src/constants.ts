@@ -45,8 +45,8 @@ export const constants = {/*
   "RBTC Moc Oracle":"RBTC Moc Oracle",
   "RIF Moc Oracle":"RIF Moc Oracle",
   "RIF":"RIF",
-  "rKovDAI":"rKovDAI",
-  'rBTC':'rBTC',
+  "rDAI":"rDAI",
+  'RBTC':'RBTC',
 };
 
 export const address = {
@@ -68,7 +68,7 @@ export const address = {
     "RBTC Moc Oracle":"0x2d39cc54dc44ff27ad23a91a9b5fd750dae4b218",
     "RIF Moc Oracle":"0x9d4b2c05818a0086e641437fcb64ab6098c7bbec",
     "RIF":"0x19f64674d8a5b4e652319f5e239efd3bc969a1fe",
-    "rKovDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
+    "rDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
   },
   "mainnet": {/*TODO - uptate this to RSK mainnet addresses*/
     "Unitroller":"0x51401d51f7cfc1a91f88a973edd0762d2021bb5b",
@@ -88,7 +88,7 @@ export const address = {
     "RBTC Moc Oracle":"0x2d39cc54dc44ff27ad23a91a9b5fd750dae4b218",
     "RIF Moc Oracle":"0x9d4b2c05818a0086e641437fcb64ab6098c7bbec",
     "RIF":"0x19f64674d8a5b4e652319f5e239efd3bc969a1fe",
-    "rKovDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
+    "rDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
   },
   "eth-mainnet": {
     "PriceFeed": "0x9b8eb8b3d6e2e0db36f41455185fef7049a35cae",
@@ -246,7 +246,7 @@ export const underlyings = ['RBTC','RIF','rDAI'];
 
 // additional assets supported by the open price feed
 // export const opfAssets = ['COMP', 'KNC', 'LINK', 'BTC'];
-export const opfAssets = ['RLEN'];
+export const opfAssets = ['RBTC','RIF','rDAI'];
 
 export const decimals = {
   'COMP': 18,
@@ -277,7 +277,7 @@ export const decimals = {
   'RLEN': 18
 };
 
-export const cTokensDetails = [{"symbol":"cRBTC","name":"ctoken rbtc","decimals":decimals["cRBTC"], "underlying":{"symbol":"RBTC", "name":"RSK Smart Bitcoin","decimals":decimals["RBTC"]}}, {"symbol":"cRIF","name":"ctoken rLending Rif","decimals":decimals["cRIF"], "underlying":{"symbol":"RIF", "name":"rLending Rif","decimals":decimals["RIF"]}}, {"symbol":"crDAI","name":"ctoken rLending Dai","decimals":decimals["crDAI"], "underlying":{"symbol":"rKovDAI", "name":"rLending Dai","decimals":decimals["DAI"]}}];
+export const cTokensDetails = [{"symbol":"cRBTC","name":"ctoken rbtc","decimals":decimals["cRBTC"], "underlying":{"symbol":"RBTC", "name":"RSK Smart Bitcoin","decimals":decimals["RBTC"]}}, {"symbol":"cRIF","name":"ctoken rLending Rif","decimals":decimals["cRIF"], "underlying":{"symbol":"RIF", "name":"rLending Rif","decimals":decimals["RIF"]}}, {"symbol":"crDAI","name":"ctoken rLending Dai","decimals":decimals["crDAI"], "underlying":{"symbol":"rDAI", "name":"rLending Dai","decimals":decimals["DAI"]}}];
 
 export const errorCodes = {
   'comptroller': {
