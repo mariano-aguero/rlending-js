@@ -189,6 +189,7 @@ export async function redeem(
   amount = ethers.BigNumber.from(amount.toString());
 
   const trxOptions: CallOptions = {
+    ...options,
     _compoundProvider: this._provider,
     abi: cTokenName === constants.cRBTC ? abi.CRBTC : abi.cErc20,
   };
