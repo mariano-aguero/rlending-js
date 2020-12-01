@@ -1,6 +1,6 @@
 {
   "name": "@riflending/riflending-js",
-  "version": "0.2.1",
+  "version": "0.2.4",
   "author": "Think and Dev",
   "description": "A JavaScript SDK for RSK and the rLending Protocol.",
   "license": "BSD-3-Clause",
