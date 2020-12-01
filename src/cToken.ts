@@ -367,8 +367,11 @@ export async function repayBorrow(
 
   if (cTokenName !== constants.cRBTC && noApprove !== true) {
     const underlyingAddress = address[this._network.name][asset];
-    const userAddress = this._provider.address;
-
+    let userAddress = this._provider.address;
+    //check user address
+    if (!userAddress && this._provider.getAddress) {
+      userAddress = await this._provider.getAddress();
+    }
     // Check allowance
     const allowance = await eth.read(
       underlyingAddress,
