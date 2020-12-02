@@ -37,7 +37,7 @@ export const constants = {/*
   "Comptroller":"Comptroller",
   "JumpRateModelV2":"JumpRateModelV2",
   "WhitePaperInterestRateModel":"WhitePaperInterestRateModel",
-  "cRDAI":"cRDAI",
+  "crDAI":"crDAI",
   "cRIF":"cRIF",
   "cRBTC":"cRBTC",
   "RLEN":"RLEN",
@@ -45,8 +45,8 @@ export const constants = {/*
   "RBTC Moc Oracle":"RBTC Moc Oracle",
   "RIF Moc Oracle":"RIF Moc Oracle",
   "RIF":"RIF",
-  "rKovDAI":"rKovDAI",
-  'rBTC':'rBTC',
+  "rDAI":"rDAI",
+  'RBTC':'RBTC',
 };
 
 export const address = {
@@ -60,7 +60,7 @@ export const address = {
     "Comptroller":"0xca8744cfaeb8ef4bc1fe5350f24058768fb78a5e",
     "JumpRateModelV2":"0x5f3fd1f2f5d8f6ac902d4653e517f1731732a0b6",
     "WhitePaperInterestRateModel":"0x8ac501b80a8932cfac4f0c55213b372c02631c5e",
-    "cRDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
+    "crDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
     "cRIF":"0x2b47f1b810faf99d911228a87c9c6d0d61514b9d",
     "cRBTC":"0xa04bb527be81bb92b59059a45206101b2d11200d",
     "RLEN":"0xcbf15821e5ecb15d46af5d98bf25b7ce49e4ebd2",
@@ -68,7 +68,7 @@ export const address = {
     "RBTC Moc Oracle":"0x2d39cc54dc44ff27ad23a91a9b5fd750dae4b218",
     "RIF Moc Oracle":"0x9d4b2c05818a0086e641437fcb64ab6098c7bbec",
     "RIF":"0x19f64674d8a5b4e652319f5e239efd3bc969a1fe",
-    "rKovDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
+    "rDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
   },
   "mainnet": {/*TODO - uptate this to RSK mainnet addresses*/
     "Unitroller":"0x51401d51f7cfc1a91f88a973edd0762d2021bb5b",
@@ -80,7 +80,7 @@ export const address = {
     "Comptroller":"0xca8744cfaeb8ef4bc1fe5350f24058768fb78a5e",
     "JumpRateModelV2":"0x5f3fd1f2f5d8f6ac902d4653e517f1731732a0b6",
     "WhitePaperInterestRateModel":"0x8ac501b80a8932cfac4f0c55213b372c02631c5e",
-    "cRDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
+    "crDAI":"0xb386c06b1240e51f98e70e4b7d216b270b12425e",
     "cRIF":"0x2b47f1b810faf99d911228a87c9c6d0d61514b9d",
     "cRBTC":"0xa04bb527be81bb92b59059a45206101b2d11200d",
     "RLEN":"0xcbf15821e5ecb15d46af5d98bf25b7ce49e4ebd2",
@@ -88,7 +88,7 @@ export const address = {
     "RBTC Moc Oracle":"0x2d39cc54dc44ff27ad23a91a9b5fd750dae4b218",
     "RIF Moc Oracle":"0x9d4b2c05818a0086e641437fcb64ab6098c7bbec",
     "RIF":"0x19f64674d8a5b4e652319f5e239efd3bc969a1fe",
-    "rKovDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
+    "rDAI":"0x0d86fca9be034a363cf12c9834af08d54a10451c"
   },
   "eth-mainnet": {
     "PriceFeed": "0x9b8eb8b3d6e2e0db36f41455185fef7049a35cae",
@@ -241,12 +241,12 @@ export const abi = {
 
 // export const cTokens = ['cBAT', 'cDAI', 'cETH', 'cREP', 'cSAI', 'cUSDC', 'cUSDT', 'cWBTC', 'cZRX'];
 // export const underlyings = ['BAT', 'DAI', 'ETH', 'REP', 'SAI', 'USDC', 'USDT', 'WBTC', 'ZRX'];
-export const cTokens = ['cRBTC', 'cRIF', 'cRDAI'];
+export const cTokens = ['cRBTC', 'cRIF', 'crDAI'];
 export const underlyings = ['RBTC','RIF','rDAI'];
 
 // additional assets supported by the open price feed
 // export const opfAssets = ['COMP', 'KNC', 'LINK', 'BTC'];
-export const opfAssets = ['RLEN'];
+export const opfAssets = ['RBTC','RIF','rDAI'];
 
 export const decimals = {
   'COMP': 18,
@@ -270,12 +270,14 @@ export const decimals = {
   'ZRX': 18,
   'cRBTC': 18,
   'cRIF': 18,
-  'cRDAI': 18,
+  'crDAI': 18,
   'RBTC': 18,
   'RIF': 18,
   'rDAI': 18,
   'RLEN': 18
 };
+
+export const cTokensDetails = [{"symbol":"cRBTC","name":"ctoken rbtc","decimals":decimals["cRBTC"], "underlying":{"symbol":"RBTC", "name":"RSK Smart Bitcoin","decimals":decimals["RBTC"]}}, {"symbol":"cRIF","name":"ctoken rLending Rif","decimals":decimals["cRIF"], "underlying":{"symbol":"RIF", "name":"rLending Rif","decimals":decimals["RIF"]}}, {"symbol":"crDAI","name":"ctoken rLending Dai","decimals":decimals["crDAI"], "underlying":{"symbol":"rDAI", "name":"rLending Dai","decimals":decimals["DAI"]}}];
 
 export const errorCodes = {
   'comptroller': {
